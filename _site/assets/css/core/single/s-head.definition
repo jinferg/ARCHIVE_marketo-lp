@@ -11,10 +11,10 @@
 
 // Spacing Variables
 @s-head__xtight: @vr1;
-@s-head__tight: @vr2;
-@s-head__narrow: @vr3;
-@s-head__wide: @vr4;
-@s-head__xwide: @vr5;
+@s-head__tight: @vr3;
+@s-head__narrow: @vr5;
+@s-head__wide: @vr7;
+@s-head__xwide: @vr9;
 
 // Custom
 @s-head__cond: -1px;

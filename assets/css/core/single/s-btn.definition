@@ -25,6 +25,7 @@
 // Standard Button Mixin
 .s-btn-mixin(@s-btn__brand: @s-btn__brand) {
   background: @s-btn__brand;
+  color: white;
   &:hover {
     background: shade(@s-btn__brand, 5%);
   }

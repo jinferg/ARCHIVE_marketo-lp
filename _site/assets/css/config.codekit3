@@ -51,18 +51,18 @@
 		"oAP": "\/core\/layout\/l-band.definition",
 		"oF": 0
 		},
-	"\/core\/layout\/l-col.definition": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/core\/layout\/l-col.definition",
-		"oF": 0
-		},
 	"\/core\/layout\/l-frame.definition": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/core\/layout\/l-frame.definition",
+		"oF": 0
+		},
+	"\/core\/layout\/l-grid.definition": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/core\/layout\/l-grid.definition",
 		"oF": 0
 		},
 	"\/core\/layout\/l-row.definition": {

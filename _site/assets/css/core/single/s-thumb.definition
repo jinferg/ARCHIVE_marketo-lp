@@ -3,10 +3,10 @@
 
 @s-thumb__radius: @radius;
 @s-thumb__xsmall: @vr3;
-@s-thumb__small: @vr4;
-@s-thumb__medium: @vr5;
-@s-thumb__large: @vr6;
-@s-thumb__xlarge: @vr7;
+@s-thumb__small: @vr5;
+@s-thumb__medium: @vr7;
+@s-thumb__large: @vr9;
+@s-thumb__xlarge: @vr12;
 
 .s-thumb {
   display: inline-flex;

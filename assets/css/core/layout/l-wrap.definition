@@ -15,6 +15,10 @@
     padding-right: @vr2;
     padding-left: @vr2;
   }
+  @media @mobile-ls {
+    padding-right: @vr3;
+    padding-left: @vr3;
+  }
   @media @tablet {
     padding-right: @vr4;
     padding-left: @vr4;
@@ -40,6 +44,11 @@
       padding: 0;
     }
   }
+  &.-ml-flush {
+    @media @mobile-ls {
+      padding: 0;
+    }
+  }
   &.-t-flush {
     @media @tablet {
       padding: 0;
@@ -47,6 +56,11 @@
   }
   &.-d-flush {
     @media @desktop {
+      padding: 0;
+    }
+  }
+  &.-v-flush {
+    @media @tv {
       padding: 0;
     }
   }

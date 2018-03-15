@@ -35,14 +35,16 @@ Site: fergus.com
 
 // 2. Overrides
 // ============================================================
-@max-width: 100%;
+@max-width: 1440px;
 @background: white;
 @default-color: #0D3753;
 @brand-color: #0D3753;
 @accent-color: #00D682;
-@link-color: white;
+@link-color: #00D682;
 @font-family: "freight-sans-pro" ,sans-serif;;
 @font-size: 1.6rem;
+@shade-light: #EDF4FB;
+
 
 @h1: 4.8rem;
 @h2: 3.6rem;
@@ -52,12 +54,12 @@ Site: fergus.com
 @h6: 1.3rem;
 
 
-@thin: 200;
-@light: 300;
-@regular: 400;
+@thin: 500;
+@light: 500;
+@regular: 500;
 @medium: 500;
 @semi-bold: 600;
-@bold: 700;
+@bold: 600;
 
 ::-webkit-scrollbar-track
 {
@@ -79,10 +81,20 @@ Site: fergus.com
 // 3. Extensions
 // ============================================================
 
+.l-wrap {
+	@media @tv {
+		max-width: 1440px;
+	}
+}
 
 .m-nav {
 	height: 100px;
 	&.-center {
 		justify-content: center;
 	}
+}
+
+.s-btn {
+	letter-spacing: 1px;
+	font-weight: @semi-bold;
 }
