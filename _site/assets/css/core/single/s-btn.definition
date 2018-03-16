@@ -110,7 +110,7 @@
   }
   &.-small {
     padding: @vr1 (@vr1 + @vr0);
-    font-size: @h5;
+    font-size: @h6;
     line-height: @vr2;
   }
   &.-large {

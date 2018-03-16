@@ -50,7 +50,7 @@ Site: fergus.com
 @h2: 3.6rem;
 @h3: 2.4rem;
 @h4: 1.8rem;
-@h5: 1.5rem;
+@h5: 1.6rem;
 @h6: 1.3rem;
 
 
@@ -61,22 +61,6 @@ Site: fergus.com
 @semi-bold: 600;
 @bold: 600;
 
-::-webkit-scrollbar-track
-{
-	background-color: black;
-}
-::-webkit-scrollbar
-{
-	width: 8px;
-}
-::-webkit-scrollbar-thumb
-{
-	background-color: white;
-	border-radius: 50px;
-	&:hover {
-		background-color: white;
-	}
-}
 
 // 3. Extensions
 // ============================================================
@@ -84,6 +68,11 @@ Site: fergus.com
 .l-wrap {
 	@media @tv {
 		max-width: 1440px;
+	}
+}
+.l-band {
+	&.-brand-alt {
+		background: #124162;
 	}
 }
 
@@ -94,7 +83,24 @@ Site: fergus.com
 	}
 }
 
+.m-list {
+	&.-footer {
+		a {
+			color: #9BC1DB;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+
 .s-btn {
 	letter-spacing: 1px;
 	font-weight: @semi-bold;
+}
+
+.s-img {
+	&.-footer {
+		width: 200px;
+	}
 }

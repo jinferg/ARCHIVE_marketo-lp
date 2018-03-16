@@ -117,7 +117,7 @@
     &.-vertical {
       flex-direction: column;
     }
-    & > * {
+    &__col {
       flex: 1;
     }
     &.-top {
@@ -131,7 +131,7 @@
     }
     &.-wrap {
       flex-wrap: wrap;
-      & > * {
+      &__col {
         flex:none;
       }
     }

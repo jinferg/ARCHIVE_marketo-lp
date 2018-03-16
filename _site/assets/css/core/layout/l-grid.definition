@@ -21,7 +21,6 @@
 	display: grid;
 	grid-template-columns: repeat(@default-columns, 1fr);
 
-
   &.-xtight {
     grid-gap: @l-grid__xtight;
   }
@@ -69,41 +68,6 @@
   &.-y-xwide {
     grid-row-gap: @l-grid__xwide;
   }
-
-  &.-flex {
-    display: flex;
-    &.-center {
-      align-self: auto;
-      justify-self: auto;
-      align-items: center;
-      justify-content: center;
-    }
-    &.-x-center {
-      justify-self: auto;
-      justify-content: center;
-    }
-    &.-y-center {
-      align-self: auto;
-      align-items: center;
-    }
-    &.-top {
-      align-self: auto;
-      align-items: flex-start;
-    }
-    &.-bottom {
-      align-self: auto;
-      align-items: flex-end;
-    }
-    &.-left {
-      justify-self: auto;
-      justify-content: flex-start;
-    }
-    &.-right {
-      justify-self: auto;
-      justify-content: flex-end;
-    }
-  }
-
 
   @media @mobile-inherit {
     &.-m {
@@ -422,14 +386,8 @@
     &.-x-center {
       justify-self: center;
     }
-    &.-y-center {
-      align-self: center;
-    }
-    &.-top {
-      align-self: start;
-    }
-    &.-bottom {
-      align-self: end;
+    .-x-stretch {
+      justify-self: stretch;
     }
     &.-left {
       justify-self: start;
@@ -437,10 +395,92 @@
     &.-right {
       justify-self: end;
     }
+    &.-y-center {
+      align-self: center;
+    }
+    &.-y-stretch {
+      align-self: stretch;
+    }
+    &.-top {
+      align-self: start;
+    }
+    &.-bottom {
+      align-self: end;
+    }
+
+
+    &.-flex {
+      display: flex;
+      &.-center {
+        align-self: auto;
+        justify-self: auto;
+        align-items: center;
+        justify-content: center;
+      }
+      &.-x-center {
+        justify-self: auto;
+        justify-content: center;
+      }
+      &.-y-center {
+        align-self: auto;
+        align-items: center;
+      }
+      &.-top {
+        align-self: auto;
+        align-items: flex-start;
+      }
+      &.-bottom {
+        align-self: auto;
+        align-items: flex-end;
+      }
+      &.-left {
+        justify-self: auto;
+        justify-content: flex-start;
+      }
+      &.-right {
+        justify-self: auto;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__area {
+    &.-flex {
+      display: flex;
+      &.-center {
+        align-self: auto;
+        justify-self: auto;
+        align-items: center;
+        justify-content: center;
+      }
+      &.-x-center {
+        justify-self: auto;
+        justify-content: center;
+      }
+      &.-y-center {
+        align-self: auto;
+        align-items: center;
+      }
+      &.-top {
+        align-self: auto;
+        align-items: flex-start;
+      }
+      &.-bottom {
+        align-self: auto;
+        align-items: flex-end;
+      }
+      &.-left {
+        justify-self: auto;
+        justify-content: flex-start;
+      }
+      &.-right {
+        justify-self: auto;
+        justify-content: flex-end;
+      }
+    }
   }
 }
 
-.l-grid-col-generate(24); // Column Set
 @media @mobile-inherit {
   .l-grid-col-generate(@default-columns,m);
 }

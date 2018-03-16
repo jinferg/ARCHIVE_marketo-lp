@@ -3,7 +3,7 @@
 
 .m-card {
 	display: block;
-	padding: @vr1;
+	padding: @vr4;
 	.card(white);
 	&.-form {
 		max-width: @vr10 * 4;

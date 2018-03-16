@@ -43,7 +43,7 @@
 @brand-color: #4580FF;
 @accent-color: #45D8FF;
 @link-color: @accent-color;
-@input-color: darken(@white, 4%);
+@input-color: #F7F8FD;
 @shade-light: rgba(0,0,0,.05);
 @shade: rgba(0,0,0,.1);
 @shade-heavy: rgba(0,0,0,.15);
