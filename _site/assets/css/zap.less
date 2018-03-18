@@ -41,7 +41,7 @@ Site: fergus.com
 @brand-color: #0D3753;
 @accent-color: #00D682;
 @link-color: #00D682;
-@font-family: "freight-sans-pro" ,sans-serif;;
+@font-family: "freight-sans-pro", sans-serif;
 @font-size: 1.6rem;
 @shade-light: #EDF4FB;
 
@@ -64,7 +64,19 @@ Site: fergus.com
 
 // 3. Extensions
 // ============================================================
+html {
 
+	@media @mobile {
+		font-size: 55%;
+	}
+	@media @mobile-ls {
+		font-size: 55%;
+	}
+	@media @tablet {
+		font-size: 60%;
+	}
+
+}
 .l-wrap {
 	@media @tv {
 		max-width: 1440px;
@@ -94,6 +106,14 @@ Site: fergus.com
 	}
 }
 
+
+
+.m-card {
+	@media @mobile {
+		padding: @vr2;
+	}
+}
+
 .s-btn {
 	letter-spacing: 1px;
 	font-weight: @semi-bold;
@@ -101,6 +121,6 @@ Site: fergus.com
 
 .s-img {
 	&.-footer {
-		width: 200px;
+		width: 150px;
 	}
 }

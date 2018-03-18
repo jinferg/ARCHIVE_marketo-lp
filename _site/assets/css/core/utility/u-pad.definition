@@ -668,6 +668,9 @@
 @media @mobile {
   .mixin-pad-viewport(20, -m-);
 }
+@media @mobile-ls {
+  .mixin-pad-viewport(20, -ml-);
+}
 @media @tablet {
   .mixin-pad-viewport(20, -t-);
 }

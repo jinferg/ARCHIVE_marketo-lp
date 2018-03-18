@@ -79,6 +79,52 @@
     }
   }
 
+  // mobile
+  &-ml {
+    &-top {
+      @media @mobile-ls {
+        border-top: @u-border !important;
+      }
+    }
+    &-right {
+      @media @mobile-ls {
+        border-right: @u-border !important;
+      }
+    }
+    &-bottom {
+      @media @mobile-ls {
+        border-bottom: @u-border !important  ;
+      }
+    }
+    &-left {
+      @media @mobile-ls {
+        border-left: @u-border !important;
+      }
+    }
+    &-x {
+      @media @mobile-ls {
+        border-left: @u-border !important;
+        border-right: @u-border !important;
+      }
+    }
+    &-y {
+      @media @mobile-ls {
+        border-top: @u-border !important;
+        border-bottom: @u-border !important;
+      }
+    }
+    &-radius {
+      @media @mobile-ls {
+        border-radius: @radius !important;
+      }
+    }
+    &-none {
+      @media @mobile-ls {
+        border: 0 !important;
+      }
+    }
+  }
+
   // tablet
   &-t {
     &-top {

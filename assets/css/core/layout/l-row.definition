@@ -305,7 +305,7 @@
     .l-row__col-generate-push(@default-columns,push-ml); // Column Push Set
     .l-row__col-generate-pull(@default-columns,pull-ml); // Column Pull Set
 
-    .l-row__col-generate(3,m,-3); // Column Set
+    .l-row__col-generate(3,ml,-3); // Column Set
     .l-row__col-generate-push(3,push-ml,-3); // Column Push Set
     .l-row__col-generate-pull(3,pull-ml,-3); // Column Pull Set
 

@@ -139,6 +139,32 @@
       line-height: @h6-height;
     }
   }
+  @media @mobile-ls {
+    &.-ml-h1 {
+      font-size: @h1;
+      line-height: @h1-height;
+    }
+    &.-ml-h2 {
+      font-size: @h2;
+      line-height: @h2-height;
+    }
+    &.-ml-h3 {
+      font-size: @h3;
+      line-height: @h3-height;
+    }
+    &.-ml-h4 {
+      font-size: @h4;
+      line-height: @h4-height;
+    }
+    &.-ml-h5 {
+      font-size: @h5;
+      line-height: @h5-height;
+    }
+    &.-ml-h6 {
+      font-size: @h6;
+      line-height: @h6-height;
+    }
+  }
   @media @tablet {
     &.-t-h1 {
       font-size: @h1;
