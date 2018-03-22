@@ -10538,6 +10538,7 @@ h6.s-head.-format {
 .s-btn {
   letter-spacing: 1px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 .s-img.-footer {
   width: 150px;
