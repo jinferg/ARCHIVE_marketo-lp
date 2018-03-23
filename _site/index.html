@@ -1,25 +1,22 @@
 <!doctype html>
 <html>
 <head>
-  <title>Marketo - Page Template</title>
+
+  <!-- SITE META -->
+  <meta class="mktoString" id="meta_title" mktoName="Meta - Title" default="Fergus | Quote, estimate and invoice" allowHtml="true">
+  <meta class="mktoString" id="meta_description" mktoName="Meta - Description" default="Description" allowHtml="true">
+
+  <title>${meta_title}</title>
 
   <!-- Page Meta -->
   <meta charset="utf-8" />
-  <meta name="description" content="Marketo Meta Description">
+  <meta name="description" content="${meta_description}">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- Social Media Open Graph -->
-  <meta property="og:title" content="Marketo - Page Template">
-  <meta property="og:description" content="Marketo Meta Description">
-  <meta property="og:image" content="/thumbnail.jpg">
-  <meta property="og:url" content="">
-  <meta name="twitter:card" content="summary_large_image">
-
   <!-- Icons -->
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-  <link rel="apple-touch-icon" sizes="180x180" href="/iPhone-6-Plus.png">
+  <link rel="icon" type="image/png" href="http://info.fergusapp.com/rs/163-RUO-573/images/favicon-16w.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="http://info.fergusapp.com/rs/163-RUO-573/images/favicon-32w.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="http://info.fergusapp.com/rs/163-RUO-573/images/favicon-96w.png" sizes="96x96">
 
   <!-- Styles -->
   <!-- <link rel="stylesheet" href="/assets/css/zap.css"> -->
@@ -51,10 +48,19 @@
     ga('send', 'pageview');
   </script>
 
-  <!-- SITE META -->
-  <meta class="mktoString" id="meta_title" mktoName="Meta - Title" default="Fergus | Quote, estimate and invoice" allowHtml="true">
-  <meta class="mktoString" id="meta_description" mktoName="Meta - Description" default="Description" allowHtml="true">
-  <meta class="mktoString" id="meta_url" mktoName="Meta - URL" default="https://fergus.com" allowHtml="true">
+
+  <meta class="mktoBoolean" id="hero_switch" mktoName="Hero - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="threeCI_switch" mktoName="Three Col Icon - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="threeCIMG_switch" mktoName="Three Col Imagae - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="plainCTA_switch" mktoName="Plain CTA - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="video_switch" mktoName="Video - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="imageLTR_switch" mktoName="Image Left Text Right - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="form_switch" mktoName="Form - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="singleCTA_switch" mktoName="Single CTA - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="testimonial_switch" mktoName="Testimonial - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="mainCTA_switch" mktoName="Main CTA - Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
+
+
 
   <!-- HERO -->
   <meta class="mktoString" id="hero_title" mktoName="Hero - Title" default="Quote, estimate and invoice" allowHtml="true">
@@ -74,13 +80,13 @@
 
 
   <!-- THREE COL IMAGE -->
-  <meta class="mktoString" id="threeCIMG_introTitle" mktoName="Three Col Icon - Intro Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_introSubtitle" mktoName="Three Col Icon - Intro Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_title1" mktoName="Three Col Icon - Title 1" default="Title 1" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_title2" mktoName="Three Col Icon - Title 2" default="Title 2" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_title3" mktoName="Three Col Icon - Title 3" default="Title 3" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_btnLink" mktoName="Three Col Icon - Button Link" default="http://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_btnText" mktoName="Three Col Icon - Button Text" default="Free Trial" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_introTitle" mktoName="Three Col Image - Intro Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_introSubtitle" mktoName="Three Col Image - Intro Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_title1" mktoName="Three Col Image - Title 1" default="Title 1" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_title2" mktoName="Three Col Image - Title 2" default="Title 2" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_title3" mktoName="Three Col Image - Title 3" default="Title 3" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_btnLink" mktoName="Three Col Image - Button Link" default="http://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_btnText" mktoName="Three Col Image - Button Text" default="Free Trial" allowHtml="true">
 
 
   <!-- PLAIN CTA -->
@@ -169,7 +175,7 @@
 
 
 
-<section class="l-band">
+<section class="l-band" style="display: ${hero_switch};">
   <div class="l-wrap">
     <div class="l-row u-marg-bottom-5vh">
       <div class="l-row__col -w-16 u-align-center">
@@ -201,7 +207,7 @@
 
 
 
-<section class="l-band -tint -shade-light u-pad-ml-y-11vh u-pad-y-8vh">
+<section class="l-band -tint -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${threeCI_switch};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -265,7 +271,7 @@
 
 
 
-<section class="l-band -tint -shade-light u-pad-ml-y-11vh u-pad-y-8vh">
+<section class="l-band -tint -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${threeCIMG_switch};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -330,7 +336,7 @@
 
 
 
-<section class="l-band -white u-pad-ml-y-11vh u-pad-y-8vh">
+<section class="l-band -white u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${plainCTA_switch};">
   <div class="l-wrap">
 
     <div class="l-row u-align-center">
@@ -355,7 +361,7 @@
 
 
 
-<section class="l-band -brand u-color-white u-pad-ml-y-11vh u-pad-y-8vh u-align-center">
+<section class="l-band -brand u-color-white u-pad-ml-y-11vh u-pad-y-8vh u-align-center" style="display: ${video_switch};">
   <div class="l-wrap">
     <h1 class="s-head -m-h2 -ml-h2 -semi-bold -xtight">
       ${video_title}
@@ -377,7 +383,7 @@
 
 
 
-<section class="l-band u-pad-ml-y-11vh u-pad-y-8vh">
+<section class="l-band u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${imageLTR_switch};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -407,7 +413,7 @@
 </section>
 
 
-<section class="l-band -shade-light u-pad-ml-y-11vh u-pad-y-8vh">
+<section class="l-band -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${form_switch};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -419,7 +425,7 @@
           ${form_subtitle}
         </h3>
         <div class="m-card">
-          <div class="mktoForm" id="exampleForm" mktoName="Example Form">
+          <div class="mktoForm m-form" id="exampleForm" mktoName="Marketo Form">
           </div>
           <!-- <form class="m-form u-marg-auto">
             <div class="m-form__item">
@@ -475,7 +481,7 @@
 </section>
 
 
-<section class="l-band u-pad-y-5vh">
+<section class="l-band u-pad-y-5vh" style="display: ${singleCTA_switch};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -492,7 +498,7 @@
 </section>
 
 
-<section class="l-band -shade-light u-pad-ml-y-11vh u-pad-y-8vh">
+<section class="l-band -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${testimonial_switch};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -583,7 +589,7 @@
 
 
 
-<section class="l-band -brand-alt u-pad-y-5vh u-color-white">
+<section class="l-band -brand-alt u-pad-y-5vh u-color-white" style="display: ${mainCTA_switch};">
   <div class="l-wrap">
 
     <div class="l-row">

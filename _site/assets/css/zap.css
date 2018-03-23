@@ -10530,9 +10530,74 @@ h6.s-head.-format {
 .m-list.-footer a:hover {
   color: white;
 }
+.m-form .mktoForm {
+  width: 100% !important;
+}
+@media only screen and (max-width : 666px) {
+  .m-form .mktoForm {
+    padding: 0;
+  }
+}
+.m-form .mktoForm .mktoFormRow {
+  margin-bottom: 2rem;
+}
+.m-form .mktoForm .mktoLabel {
+  float: none;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.m-form .mktoForm .mktoGutter {
+  display: none !important;
+}
+.m-form .mktoForm .mktoOffset {
+  display: none !important;
+}
+.m-form .mktoForm .mktoFormCol {
+  float: none;
+  width: 100%;
+}
+.m-form .mktoForm .mktoFieldWrap {
+  float: none;
+  width: 100%;
+}
+.m-form .mktoForm .mktoButtonRow {
+  width: 100%;
+  text-align: center;
+}
+.m-form .mktoForm .mktoButtonWrap {
+  margin: auto !important;
+  text-align: center !important;
+}
+.m-form .mktoForm input {
+  width: 100% !important;
+  max-width: 100%;
+}
+.m-form .mktoForm button.mktoButton {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 1rem 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  font-family: "freight-sans-pro", sans-serif;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #00D682;
+  color: white;
+}
 @media only screen and (max-width : 666px) {
   .m-card {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 .s-btn {

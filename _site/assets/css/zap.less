@@ -106,11 +106,77 @@ html {
 	}
 }
 
+.m-form {
+	.mktoForm {
+		width: 100% !important;
+		@media @mobile {
+			padding: 0;
+		}
+		.mktoFormRow {
+			margin-bottom: @vr2;
+		}
+		.mktoLabel {
+			float: none;
+			width: 100%;
+			padding-bottom: @vr1;
+		}
+		.mktoGutter {
+			display: none !important;
+		}
+		.mktoOffset {
+			display: none !important;
+		}
+		.mktoFormCol {
+			float: none;
+			width: 100%;
+		}
+		.mktoFieldWrap {
+			float: none;
+			width: 100%;
+		}
+		.mktoButtonRow {
+			width: 100%;
+			text-align: center;
+		}
+		.mktoButtonWrap {
+			margin: auto !important;
+			text-align: center !important;
+		}
+		input {
+			width: 100% !important;
+			max-width: 100%;
+		}
+		button.mktoButton {
+			display: inline-block;
+			margin-right: 0.5rem;
+			padding: 1rem 2rem;
+			padding-left: 4rem;
+			padding-right: 4rem;
+			outline: none;
+			border: none;
+			border-radius: 100px;
+			font-family: "freight-sans-pro", sans-serif;
+			font-size: 1.6rem;
+			font-weight: @semi-bold;
+			line-height: 3rem;
+			letter-spacing: 1px;
+			font-weight: 600;
+			text-transform: uppercase;
+			text-align: center;
+			transition: all 0.2s ease;
+			white-space: nowrap;
+			cursor: pointer;
+			background: @accent-color;
+			color: white;
+		}
+	}
+}
+
 
 
 .m-card {
 	@media @mobile {
-		padding: @vr2;
+		padding: @vr1;
 	}
 }
 
