@@ -50,10 +50,12 @@
 
 
   <meta class="mktoBoolean" id="hero_switch" mktoName="Hero - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="heroIMG_switch" mktoName="Hero Image - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="threeCI_switch" mktoName="Three Col Icon - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="threeCIMG_switch" mktoName="Three Col Imagae - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="plainCTA_switch" mktoName="Plain CTA - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="video_switch" mktoName="Video - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="videoYT_switch" mktoName="Video YouTube - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="videoVM_switch" mktoName="Video Vimeo - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="imageLTR_switch" mktoName="Image Left Text Right - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="form_switch" mktoName="Form - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="singleCTA_switch" mktoName="Single CTA - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -63,6 +65,10 @@
 
 
   <!-- HERO -->
+  <meta class="mktoBoolean" id="hero_title_switch" mktoName="Hero - Title Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="hero_subtitle_switch" mktoName="Hero - Subtitle Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="hero_btn_switch" mktoName="Hero - Button Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="hero_disclaimer_switch" mktoName="Hero - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoString" id="hero_title" mktoName="Hero - Title" default="Quote, estimate and invoice" allowHtml="true">
   <meta class="mktoString" id="hero_subtitle" mktoName="Hero - Subtitle" default="All from the same place. Forget data entry." allowHtml="true">
   <meta class="mktoString" id="hero_btnLink" mktoName="Hero - Button Link" default="http://fergus.com" allowHtml="true">
@@ -96,9 +102,16 @@
   <meta class="mktoString" id="plainCTA_btnText" mktoName="Plain CTA - Button Text" default="Free Trial" allowHtml="true">
 
 
-  <!-- VIDEO -->
-  <meta class="mktoString" id="video_title" mktoName="Video - Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="video_subtitle" mktoName="Video - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <!-- VIDEO YOUTUBE -->
+  <meta class="mktoString" id="videoYT_title" mktoName="Video Youtube - Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="videoYT_subtitle" mktoName="Video Youtube - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="videoYT_link" mktoName="Video Youtube - Link" default="QILiHiTD3uc" allowHtml="true">
+
+
+  <!-- VIDEO VIMEO -->
+  <meta class="mktoString" id="videoVM_title" mktoName="Video Vimeo - Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="videoVM_subtitle" mktoName="Video Vimeo - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="videoVM_link" mktoName="Video Vimeo - Link" default="65369460" allowHtml="true">
 
 
   <!-- IMAGE LEFT TEXT RIGHT -->
@@ -179,23 +192,30 @@
   <div class="l-wrap">
     <div class="l-row u-marg-bottom-5vh">
       <div class="l-row__col -w-16 u-align-center">
-        <h1 class="s-head -m-h2 -ml-h2 -semi-bold -xtight">
+        <h1 class="s-head -m-h2 -ml-h2 -semi-bold -xtight" style="display: ${hero_title_switch};">
           ${hero_title}
         </h1>
-        <h3 class="s-head -m-h3 -medium -narrow">
+        <h3 class="s-head -m-h3 -medium -narrow" style="display: ${hero_subtitle_switch};">
           ${hero_subtitle}
         </h3>
-
-        <a href="${hero_btnLink}" class="s-btn -round -accent -broader">
-          ${hero_btnText}
-        </a>
-
-        <p class="u-marg-top-tight">
+        <div style="display: ${hero_btn_switch};">
+          <a href="${hero_btnLink}" class="s-btn -round -accent -broader">
+            ${hero_btnText}
+          </a>
+        </div>
+        <p class="u-marg-top-tight" style="display: ${hero_disclaimer_switch};">
           ${hero_disclaimer}
         </p>
       </div>
     </div>
+  </div>
+</section>
 
+
+
+
+<section class="l-band" style="display: ${heroImage_switch};">
+  <div class="l-wrap">
     <div class="l-row">
       <div class="l-row__col -m-16 -t-14 -d-12 -v-10 -center">
         <img class="mktoImg" id="hero_image" mktoName="Hero - Image">
@@ -361,18 +381,34 @@
 
 
 
-<section class="l-band -brand u-color-white u-pad-ml-y-11vh u-pad-y-8vh u-align-center" style="display: ${video_switch};">
+<section class="l-band -brand u-color-white u-pad-ml-y-11vh u-pad-y-8vh u-align-center" style="display: ${videoYT_switch};">
   <div class="l-wrap">
     <h1 class="s-head -m-h2 -ml-h2 -semi-bold -xtight">
-      ${video_title}
+      ${videoYT_title}
     </h1>
     <h3 class="s-head -m-h4 -medium -xwide">
-      ${video_subtitle}
+      ${videoYT_subtitle}
     </h3>
     <div class="l-row">
       <div class="l-row__col -m-16 -t-14 -d-10 -v-10 -center">
-        <div class="mktoVideo" id="video_embed" mktoName="Video URL">
-        </div>
+        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/${videoVM_link}' frameborder='0' allowfullscreen></iframe></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="l-band -brand u-color-white u-pad-ml-y-11vh u-pad-y-8vh u-align-center" style="display: ${videoVM_switch};">
+  <div class="l-wrap">
+    <h1 class="s-head -m-h2 -ml-h2 -semi-bold -xtight">
+      ${videoVM_title}
+    </h1>
+    <h3 class="s-head -m-h4 -medium -xwide">
+      ${videoVM_subtitle}
+    </h3>
+    <div class="l-row">
+      <div class="l-row__col -m-16 -t-14 -d-10 -v-10 -center">
+        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/${videoVM_link}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
       </div>
     </div>
 

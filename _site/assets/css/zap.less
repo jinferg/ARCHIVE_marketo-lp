@@ -67,13 +67,13 @@ Site: fergus.com
 html {
 
 	@media @mobile {
-		font-size: 55%;
+		font-size: 50%;
 	}
 	@media @mobile-ls {
-		font-size: 55%;
+		font-size: 50%;
 	}
 	@media @tablet {
-		font-size: 60%;
+		font-size: 55%;
 	}
 
 }
@@ -106,74 +106,6 @@ html {
 	}
 }
 
-.m-form {
-	.mktoForm {
-		width: 100% !important;
-		@media @mobile {
-			padding: 0;
-		}
-		.mktoFormRow {
-			margin-bottom: @vr2;
-		}
-		.mktoLabel {
-			float: none;
-			width: 100%;
-			padding-bottom: @vr1;
-		}
-		.mktoGutter {
-			display: none !important;
-		}
-		.mktoOffset {
-			display: none !important;
-		}
-		.mktoFormCol {
-			float: none;
-			width: 100%;
-		}
-		.mktoFieldWrap {
-			float: none;
-			width: 100%;
-		}
-		.mktoButtonRow {
-			width: 100%;
-			text-align: center;
-		}
-		.mktoButtonWrap {
-			margin: auto !important;
-			text-align: center !important;
-		}
-		input {
-			width: 100% !important;
-			max-width: 100%;
-		}
-		button.mktoButton {
-			display: inline-block;
-			margin-right: 0.5rem;
-			padding: 1rem 2rem;
-			padding-left: 4rem;
-			padding-right: 4rem;
-			outline: none;
-			border: none;
-			border-radius: 100px;
-			font-family: "freight-sans-pro", sans-serif;
-			font-size: 1.6rem;
-			font-weight: @semi-bold;
-			line-height: 3rem;
-			letter-spacing: 1px;
-			font-weight: 600;
-			text-transform: uppercase;
-			text-align: center;
-			transition: all 0.2s ease;
-			white-space: nowrap;
-			cursor: pointer;
-			background: @accent-color;
-			color: white;
-		}
-	}
-}
-
-
-
 .m-card {
 	@media @mobile {
 		padding: @vr1;
@@ -190,4 +122,220 @@ html {
 	&.-footer {
 		width: 150px;
 	}
+}
+
+
+.input-group{
+	margin-bottom: 15px !important;
+	display: block !important;
+	position: relative !important;
+}
+.input-group .input{
+	background: #FFFFFF !important;
+	color: #777777 !important;
+	border: 1px solid #E5E5E5 !important;
+	width: 100% !important;
+	font-size: 14px !important;
+	padding: 15px !important;
+	display: block !important;
+	border-radius: 5px !important;
+	font-weight: 100 !important;
+	margin: 0px !important;
+}
+.input-group label{
+	font-weight: 800 !important;
+	color: black !important;
+	margin-bottom: 5px !important;
+	display: block !important;
+	font-size: 12px !important;
+}
+select {
+  height: 50px !important;
+  max-width: 300px !important;
+}
+fieldset {
+  margin-bottom: 20px !important;
+}
+.select-wrap{
+	position: relative !important;
+}
+textarea.input{
+	min-height: 150px !important;
+}
+::-webkit-input-placeholder{
+  	color: #bbb !important;
+}
+::-moz-placeholder{
+  	color: #bbb !important;
+}
+:-ms-input-placeholder{
+  	color: #bbb !important;
+}
+:-moz-placeholder {
+  	color: #bbb !important;
+}
+.input:focus {
+	border: 1px solid black !important;
+	outline:none !important;
+}
+.button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 0 !important;
+    outline:none !important;
+}
+.error label,
+.error .input:focus,
+.error .input,
+.error{
+	border-color:#D0021B !important;
+	color:#D0021B !important;
+}
+.error .error-txt{
+	font-weight: 600 !important;
+	margin-top: 5px !important;
+	display: block !important;
+}
+input[type="submit"],
+.button{
+	border-radius: 50px !important;
+	color:white !important;
+	font-size: 14px !important;
+	padding: 20px 30px !important;
+	display: inline-block !important;
+	background: black !important;
+	border:0px !important;
+	font-weight: 800 !important;
+	letter-spacing: 2 !important;
+	transition: .25s all ease !important;
+	transform: scale(1) !important;
+	margin-top: 15px !important;
+}
+.button:hover{
+	transition: .25s all ease !important;
+	transform: scale(1.1) !important;
+}
+.required label:after{
+	content: ' *'
+}
+
+/* ******************************* */
+/* ******************************* */
+/* Start Custom Styles for Marketo */
+/* ******************************* */
+/* ******************************* */
+.mktoForm {
+  width: 100% !important;
+}
+
+.mktoFieldWrap{
+	margin-bottom: 15px !important;
+	display: block !important;
+	position: relative !important;
+}
+.mktoFieldWrap .mktoField{
+	background: #FFFFFF !important;
+	color: #777777 !important;
+	border: 1px solid #E5E5E5 !important;
+	width: 100% !important;
+	font-size: 14px !important;
+	padding: 15px !important;
+	display: block !important;
+	border-radius: 5px !important;
+	font-weight: 100 !important;
+	margin: 0px !important;
+}
+.mktoFieldWrap label{
+	font-weight: 800 !important;
+	color: black !important;
+	margin-bottom: 5px !important;
+	display: block !important;
+	font-size: 12px !important;
+}
+
+input[type="submit"],
+.mktoButton{
+	  display: inline-block !important;
+    margin-right: 0.5rem !important;
+    padding: 1rem 2rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    outline: none !important;
+    border: none !important;
+    border-radius: 100px !important;
+    font-family: "freight-sans-pro", sans-serif !important;
+    font-size: 1.6rem !important;
+    line-height: 3rem !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    -webkit-transition: all 0.2s ease !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    background: #00D682 !important;
+    color: white !important;
+}
+
+
+.mktoAsterix {
+    display: inline-block !important;
+		color: red !important;
+  margin-right: 5px !important;
+}
+
+.mktoRadioList .mktoField {
+  width: 15px !important;
+  float: left !important;
+  clear: left !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.mktoRadioList label {
+  float: left !important;
+  clear: right !important;
+}
+
+.mktoCheckboxList .mktoField[id^="mktoCheckbox"] {
+  width: 15px !important;
+  float: left !important;
+  clear: left !important;
+  margin-right: 5px !important;
+}
+
+.mktoCheckboxList label[for^="mktoCheckbox"] {
+  float: left !important;
+  clear: right !important;
+}
+
+.mktoFormRow {
+  clear: both !important;
+}
+
+.mktoButtonRow {
+  clear: both !important;
+}
+
+
+// CUSTOM OVERRIDE
+
+.mktoForm .mktoFieldWrap {
+	float: none !important;
+}
+.mktoForm .mktoFormCol {
+	width: 100%;
+}
+
+.mktoForm .mktoOffset {
+	display: none !important;
+}
+
+.mktoButtonWrap.mktoNative {
+  display: block !important;
+  margin: auto !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
