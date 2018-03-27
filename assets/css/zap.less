@@ -159,9 +159,7 @@ fieldset {
 .select-wrap{
 	position: relative !important;
 }
-textarea.input{
-	min-height: 150px !important;
-}
+
 ::-webkit-input-placeholder{
   	color: #bbb !important;
 }
@@ -252,6 +250,7 @@ input[type="submit"],
 	margin-bottom: 5px !important;
 	display: block !important;
 	font-size: 12px !important;
+	width: auto !important;
 }
 
 input[type="submit"],
@@ -326,11 +325,27 @@ input[type="submit"],
 	float: none !important;
 }
 .mktoForm .mktoFormCol {
-	width: 100%;
+	width: 100% !important;
 }
 
 .mktoForm .mktoOffset {
 	display: none !important;
+}
+
+.mktoForm .mktoGutter {
+	float: none !important;
+	width: 100% !important;
+	height: 5px !important;
+	clear: both !important;
+}
+.mktoButtonRow {
+	width: 100% !important;
+}
+span.mktoButtonWrap {
+	display: block !important;
+	width: 100% !important;
+	margin: auto !important;
+	text-align: center !important;
 }
 
 .mktoButtonWrap.mktoNative {
@@ -338,4 +353,14 @@ input[type="submit"],
   margin: auto !important;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
+}
+
+.mktoForm textarea {
+	min-height: 200px !important;
+}
+
+.mktoRadioList label {
+	margin-left: 0.25em !important;
+	margin-top: 0 !important;
+	line-height: 1.2 !important;
 }
