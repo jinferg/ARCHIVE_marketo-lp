@@ -49,6 +49,7 @@
   </script>
 
 
+  <!-- SECTION SWITCHES -->
   <meta class="mktoBoolean" id="hero_switch" mktoName="Hero - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="heroIMG_switch" mktoName="Hero Image - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="threeCI_switch" mktoName="Three Col Icon - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -69,11 +70,8 @@
   <meta class="mktoBoolean" id="hero_subtitle_switch" mktoName="Hero - Subtitle Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="hero_btn_switch" mktoName="Hero - Button Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="hero_disclaimer_switch" mktoName="Hero - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoString" id="hero_title" mktoName="Hero - Title" default="Quote, estimate and invoice" allowHtml="true">
-  <meta class="mktoString" id="hero_subtitle" mktoName="Hero - Subtitle" default="All from the same place. Forget data entry." allowHtml="true">
-  <meta class="mktoString" id="hero_btnLink" mktoName="Hero - Button Link" default="http://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="hero_btnText" mktoName="Hero - Button Text" default="Free Trial" allowHtml="true">
-  <meta class="mktoString" id="hero_disclaimer" mktoName="Hero - Disclaimer" default="No credit card required. Try it for 30 days for free." allowHtml="true">
+    <meta class="mktoBoolean" id="hero_custom_switch" mktoName="Hero - Custom Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+\
 
   <!-- THREE COL ICON -->
   <meta class="mktoString" id="threeCI_introTitle" mktoName="Three Col Icon - Intro Title" default="The nuts and bolts" allowHtml="true">
@@ -123,6 +121,8 @@
   <!-- FORM -->
   <meta class="mktoString" id="form_title" mktoName="Form - Title" default="Sign up Form" allowHtml="true">
   <meta class="mktoString" id="form_subtitle" mktoName="Form - Subitle" default="This is an example of a form block for marketo" allowHtml="true">
+  <meta class="mktoBoolean" id="form_disclaimer_switch" mktoName="Form - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="form_disclaimer" mktoName="Form - Disclaimer" default="Please note, your email preference settings only apply to Fergus marketing emails. We may still send you operational emails that contain important information relating to Fergus services or your Fergus account." allowHtml="true">
 
 
   <!-- SINGLE CTA -->
@@ -174,7 +174,7 @@
   </div>
 </header> -->
 
-<header class="l-band -band u-pad-top-5vh u-marg-bottom-5vh">
+<header class="l-band u-pad-top-5vh u-pad-bottom-5vh">
   <div class="l-wrap">
     <menu class="m-nav -center">
       <div class="m-nav__group">
@@ -192,22 +192,38 @@
 
 <section class="l-band" style="display: ${hero_switch};">
   <div class="l-wrap">
-    <div class="l-row u-marg-bottom-5vh">
+    <div class="l-row u-pad-bottom-5vh">
       <div class="l-row__col -w-16 u-align-center">
-        <h1 class="s-head -m-h2 -ml-h2 -semi-bold -xtight" style="display: ${hero_title_switch};">
-          ${hero_title}
-        </h1>
-        <h3 class="s-head -m-h3 -medium -narrow" style="display: ${hero_subtitle_switch};">
-          ${hero_subtitle}
-        </h3>
+        <div style="display: ${hero_title_switch};">
+          <h1 class="mktoText s-head -m-h2 -ml-h2 -semi-bold -xtight" id="hero_title" mktoName="Hero - Title">
+            Quote, estimate and invoice
+          </h1>
+        </div>
+
+        <div style="display: ${hero_subtitle_switch};">
+          <h3 class="mktoText s-head -m-h3 -medium -narrow" id="hero_subtitle" mktoName="Hero - Subtitle">
+            All from the same place. Forget data entry.
+          </h3>
+        </div>
+
         <div style="display: ${hero_btn_switch};">
-          <a href="${hero_btnLink}" class="s-btn -round -accent -broader">
-            ${hero_btnText}
+          <a href="http://fergus.com" class="mktoText s-head -m-h3 -medium -narrow" id="hero_btn" mktoName="Hero - Button">
+            Start free trial
           </a>
         </div>
-        <p class="u-marg-top-tight" style="display: ${hero_disclaimer_switch};">
-          ${hero_disclaimer}
-        </p>
+
+        <div style="display: ${hero_disclaimer_switch};">
+          <h5 class="mktoText s-head -m-h6 -medium -narrow" id="hero_disclaimer" mktoName="Hero - Disclaimer">
+            No credit card required. Try it for 30 days for free.
+          </h5>
+        </div>
+
+        <div style="display: ${hero_custom_switch};">
+          <div class="mktoText" id="hero_custom" mktoName="Hero - Custom">
+            CUSTOM CONTENT
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -245,9 +261,9 @@
 
     <div class="l-row">
       <div class="l-row__col -m-16 -t-14 -d-11 -center">
-        <div class="l-row -wide u-marg-bottom-tight">
+        <div class="l-row -wide u-pad-bottom-tight">
           <div class="l-row__col -m-16 -ml-1-3 -t-1-3 u-pad-y-3vh">
-            <img class="mktoImg s-thumb -round u-marg-bottom-2vh" id="threeCI_image1" mktoName="Three Col Icon - Image 1">
+            <img class="mktoImg s-thumb -round u-pad-bottom-2vh" id="threeCI_image1" mktoName="Three Col Icon - Image 1">
             <h3 class="s-head -medium -xtight">
               ${threeCI_title1}
             </h3>
@@ -257,7 +273,7 @@
           </div>
 
           <div class="l-row__col -m-16 -ml-1-3 -t-1-3 u-pad-y-3vh">
-            <img class="mktoImg s-thumb -round u-marg-bottom-2vh" id="threeCI_image2" mktoName="Three Col Icon - Image 2">
+            <img class="mktoImg s-thumb -round u-pad-bottom-2vh" id="threeCI_image2" mktoName="Three Col Icon - Image 2">
             <h3 class="s-head -medium -xtight">
               ${threeCI_title2}
             </h3>
@@ -267,7 +283,7 @@
           </div>
 
           <div class="l-row__col -m-16 -ml-1-3 -t-1-3 u-pad-y-3vh">
-            <img class="mktoImg s-thumb -round u-marg-bottom-2vh" id="threeCI_image3" mktoName="Three Col Icon - Image 3">
+            <img class="mktoImg s-thumb -round u-pad-bottom-2vh" id="threeCI_image3" mktoName="Three Col Icon - Image 3">
             <h3 class="s-head -medium -xtight">
               ${threeCI_title3}
             </h3>
@@ -309,9 +325,9 @@
 
     <div class="l-row">
       <div class="l-row__col -m-16 -t-14 -d-11 -center">
-        <div class="l-row -wide u-marg-bottom-tight">
+        <div class="l-row -wide u-pad-bottom-tight">
           <div class="l-row__col -m-16 -ml-1-3 -t-1-3 u-pad-y-3vh">
-            <img class="mktoImg s-img u-marg-bottom-2vh" id="threeCIMG_image1" mktoName="Three Col Icon - Image 1">
+            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image1" mktoName="Three Col Icon - Image 1">
             <h3 class="s-head -medium -xtight">
               ${threeCIMG_title1}
             </h3>
@@ -321,7 +337,7 @@
           </div>
 
           <div class="l-row__col -m-16 -ml-1-3 -t-1-3 u-pad-y-3vh">
-            <img class="mktoImg s-img u-marg-bottom-2vh" id="threeCIMG_image2" mktoName="Three Col Icon - Image 2">
+            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image2" mktoName="Three Col Icon - Image 2">
             <h3 class="s-head -medium -xtight">
               ${threeCIMG_title2}
             </h3>
@@ -331,7 +347,7 @@
           </div>
 
           <div class="l-row__col -m-16 -ml-1-3 -t-1-3 u-pad-y-3vh">
-            <img class="mktoImg s-img u-marg-bottom-2vh" id="threeCIMG_image3" mktoName="Three Col Icon - Image 3">
+            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image3" mktoName="Three Col Icon - Image 3">
             <h3 class="s-head -medium -xtight">
               ${threeCIMG_title3}
             </h3>
@@ -435,7 +451,7 @@
             <h3 class="s-head -medium -tight">
               ${imageLTR_title}
             </h3>
-            <div class="mktoText u-marg-bottom-tight" id="imageLTR_body" mktoName="Body">
+            <div class="mktoText u-pad-bottom-tight" id="imageLTR_body" mktoName="Body">
               Optionally add default text for the editable text area.
             </div>
             <a href="${imageLTR_btnLink}" class="s-btn -round -accent -broad -small u-marg-top-xtight">
@@ -465,53 +481,10 @@
         <div class="m-card">
           <div class="mktoForm m-form" id="exampleForm" mktoName="Marketo Form">
           </div>
-          <!-- <form class="m-form u-marg-auto">
-            <div class="m-form__item">
-              <label for="fullname">Full name</label>
-              <input id="fullname" type="text" placeholder="Fullname" class="-fluid">
-            </div>
-            <div class="m-form__item">
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="Email" class="-fluid">
-            </div>
-
-            <div class="m-form__item">
-              <label for="message">Textfield Block</label>
-              <textarea name="firstname" class="-fluid">Some text...</textarea>
-            </div>
-            <div class="m-form__item">
-              <label class="m-form__checkbox">
-                I agree to the Terms and Conditions
-                <input type="checkbox"/>
-                <div class="m-form__checkbox-indicator"></div>
-              </label>
-
-              <label class="m-form__radio">Disabled &amp; checked
-                <input type="radio" name="radio2">
-                <div class="m-form__radio-indicator"></div>
-              </label>
-            </div>
-
-            <div class="m-form__item">
-              <label for="email">Email</label>
-              <div class="m-form__select">
-                <select>
-                  <option>First select</option>
-                  <option>Option</option>
-                  <option>Option</option>
-                </select>
-                <div class="m-form__select-arrow"></div>
-              </div>
-            </div>
-
-            <div class="m-form__item u-align-center">
-              <button type="submit" class="s-btn -accent -round -broader">
-                SUBMIT
-              </button>
-            </div>
-
-          </form> -->
         </div>
+        <p class="u-marg-top-tight u-align-center" style="display: ${form_disclaimer_switch};">
+          ${form_disclaimer}
+        </p>
       </div>
     </div>
 
@@ -550,7 +523,7 @@
 
         <div class="l-row">
           <div class="l-row__col -m-16 -t-16 -d-14 -v-14 -center">
-            <div class="l-row -wide u-marg-bottom-tight u-align-center">
+            <div class="l-row -wide u-pad-bottom-tight u-align-center">
               <div class="l-row__col -m-16 -t-8 -d-4 u-pad-y-3vh">
                 <i class="fas fa-star u-color-yellow"></i>
                 <i class="fas fa-star u-color-yellow"></i>
