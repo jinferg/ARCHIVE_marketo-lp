@@ -10291,6 +10291,9 @@ h6.s-head.-format {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.m-nav a:hover {
+  background: transparent;
+}
 .m-list.-footer a {
   color: #9BC1DB;
 }
