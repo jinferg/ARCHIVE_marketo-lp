@@ -64,14 +64,34 @@
   <meta class="mktoBoolean" id="mainCTA_switch" mktoName="Main CTA - Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
 
 
+  <!-- MASTER SWITCHES -->
+  <meta class="mktoBoolean" id="margin_toggle" mktoName="Margin - Toggle" default="false" true_value="padding-top: 0 !important" false_value="" false_value_name="Default" true_value_name="None">
+
+  <!-- BAND SWITCHES -->
+  <meta class="mktoBoolean" id="header_band" mktoName="Header - Band" default="false" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="hero_band" mktoName="Hero - Band" default="false" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="heroIMG_band" mktoName="Hero Image - Band" default="true" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="threeCI_band" mktoName="Three Col Icon - Band" default="true" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="threeCIMG_band" mktoName="Three Col Imagae - Band" default="true" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="plainCTA_band" mktoName="Plain CTA - Band" default="false" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="imageLTR_band" mktoName="Image Left Text Right - Band" default="false" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="form_band" mktoName="Form - Band" default="true" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="singleCTA_band" mktoName="Single CTA - Band" default="false" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+  <meta class="mktoBoolean" id="testimonial_band" mktoName="Testimonial - Band" default="true" true_value="-shade-light" false_value="-white" false_value_name="White" true_value_name="Shade">
+
+
 
   <!-- HERO -->
   <meta class="mktoBoolean" id="hero_title_switch" mktoName="Hero - Title Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="hero_subtitle_switch" mktoName="Hero - Subtitle Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="hero_btn_switch" mktoName="Hero - Button Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="hero_disclaimer_switch" mktoName="Hero - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-    <meta class="mktoBoolean" id="hero_custom_switch" mktoName="Hero - Custom Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-\
+  <meta class="mktoBoolean" id="hero_custom_switch" mktoName="Hero - Custom Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="hero_title" mktoName="Hero - Title" default="Quote, estimate and invoice" allowHtml="true">
+  <meta class="mktoString" id="hero_subtitle" mktoName="Hero - Subtitle" default="All from the same place. Forget data entry." allowHtml="true">
+  <meta class="mktoString" id="hero_btnLink" mktoName="Hero - Button Link" default="http://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="hero_btnText" mktoName="Hero - Button Text" default="Free Trial" allowHtml="true">
+  <meta class="mktoString" id="hero_disclaimer" mktoName="Hero - Disclaimer" default="No credit card required. Try it for 30 days for free." allowHtml="true">
 
   <!-- THREE COL ICON -->
   <meta class="mktoString" id="threeCI_introTitle" mktoName="Three Col Icon - Intro Title" default="The nuts and bolts" allowHtml="true">
@@ -162,19 +182,7 @@
 <body>
 
 
-<!-- <header class="l-band -band">
-  <div class="l-wrap">
-    <menu class="m-nav">
-      <div class="m-nav__group">
-        <div class="m-nav__item">
-          <img src="{{ site.baseurl }}/assets/img/fergus-logo.svg" />
-        </div>
-      </div>
-    </menu>
-  </div>
-</header> -->
-
-<header class="l-band u-pad-top-5vh u-pad-bottom-5vh">
+<header class="l-band ${header_band} u-pad-top-5vh u-pad-bottom-5vh">
   <div class="l-wrap">
     <menu class="m-nav -center">
       <div class="m-nav__group">
@@ -190,33 +198,24 @@
 
 
 
-<section class="l-band" style="display: ${hero_switch};">
+<section class="l-band ${hero_band}" style="display: ${hero_switch};">
   <div class="l-wrap">
     <div class="l-row u-pad-bottom-5vh">
       <div class="l-row__col -w-16 u-align-center">
-        <div style="display: ${hero_title_switch};">
-          <h1 class="mktoText s-head -m-h2 -ml-h2 -semi-bold -xtight" id="hero_title" mktoName="Hero - Title">
-            Quote, estimate and invoice
-          </h1>
-        </div>
-
-        <div style="display: ${hero_subtitle_switch};">
-          <h3 class="mktoText s-head -m-h3 -medium -narrow" id="hero_subtitle" mktoName="Hero - Subtitle">
-            All from the same place. Forget data entry.
-          </h3>
-        </div>
-
+        <<h1 class="s-head -m-h2 -ml-h2 -semi-bold -xtight" style="display: ${hero_title_switch};">
+          ${hero_title}
+        </h1>
+        <h3 class="s-head -m-h3 -medium -narrow" style="display: ${hero_subtitle_switch};">
+          ${hero_subtitle}
+        </h3>
         <div style="display: ${hero_btn_switch};">
-          <a href="http://fergus.com" class="mktoText s-head -m-h3 -medium -narrow" id="hero_btn" mktoName="Hero - Button">
-            Start free trial
+          <a href="${hero_btnLink}" class="s-btn -round -accent -broader">
+            ${hero_btnText}
           </a>
         </div>
-
-        <div style="display: ${hero_disclaimer_switch};">
-          <h5 class="mktoText s-head -m-h6 -medium -narrow" id="hero_disclaimer" mktoName="Hero - Disclaimer">
-            No credit card required. Try it for 30 days for free.
-          </h5>
-        </div>
+        <p class="u-marg-top-tight" style="display: ${hero_disclaimer_switch};">
+          ${hero_disclaimer}
+        </p>
 
         <div style="display: ${hero_custom_switch};">
           <div class="mktoText" id="hero_custom" mktoName="Hero - Custom">
@@ -232,7 +231,7 @@
 
 
 
-<section class="l-band" style="display: ${heroIMG_switch};">
+<section class="l-band ${heroIMG_band}" style="display: ${heroIMG_switch}; ${margin_toggle};">
   <div class="l-wrap">
     <div class="l-row">
       <div class="l-row__col -m-16 -t-14 -d-12 -v-10 -center">
@@ -245,7 +244,7 @@
 
 
 
-<section class="l-band -tint -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${threeCI_switch};">
+<section class="l-band ${threeCI_band} u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${threeCI_switch}; ${margin_toggle};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -309,7 +308,7 @@
 
 
 
-<section class="l-band -tint -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${threeCIMG_switch};">
+<section class="l-band ${threeCIMG_band} u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${threeCIMG_switch}; ${margin_toggle};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -374,7 +373,7 @@
 
 
 
-<section class="l-band -white u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${plainCTA_switch};">
+<section class="l-band ${plainCTA_band} u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${plainCTA_switch}; ${margin_toggle};">
   <div class="l-wrap">
 
     <div class="l-row u-align-center">
@@ -437,7 +436,7 @@
 
 
 
-<section class="l-band u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${imageLTR_switch};">
+<section class="l-band ${imageLTR_band} u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${imageLTR_switch}; ${margin_toggle};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -467,7 +466,7 @@
 </section>
 
 
-<section class="l-band -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${form_switch};">
+<section class="l-band ${form_band} u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${form_switch}; ${margin_toggle};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -492,7 +491,7 @@
 </section>
 
 
-<section class="l-band u-pad-y-5vh" style="display: ${singleCTA_switch};">
+<section class="l-band ${singleCTA_band} u-pad-y-5vh" style="display: ${singleCTA_switch}; ${margin_toggle};">
   <div class="l-wrap">
 
     <div class="l-row">
@@ -509,7 +508,7 @@
 </section>
 
 
-<section class="l-band -shade-light u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${testimonial_switch};">
+<section class="l-band ${testimonial_band} u-pad-ml-y-11vh u-pad-y-8vh" style="display: ${testimonial_switch}; ${margin_toggle};">
   <div class="l-wrap">
 
     <div class="l-row">
